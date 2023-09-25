@@ -11,19 +11,19 @@ function llamarTodos(){
 }
 
 function calcularBinario(){
-    VstDecimal=document.getElementById("Decimal").value;
-    VstBinario=parseInt(VstDecimal).toString(2);
+    VstDecimal=parseInt(document.getElementById("Decimal").value);
+    VstBinario=VstDecimal.toString(2);
     document.getElementById("Binario").value=VstBinario;
 }
 
 function calcularOctal(){
-    VstDecimal=document.getElementById("Decimal").value;
-    VstOctal=parseInt(VstDecimal).toString(8);
+    VstDecimal=parseInt(document.getElementById("Decimal").value);
+    VstOctal=VstDecimal.toString(8);
     document.getElementById("Octal").value=VstOctal;
 }
 
 function calcularHexadecimal(){
-    VstDecimal=document.getElementById("Decimal").value;
-    VstHex=parseInt(VstDecimal).toString(16);
+    VstDecimal=parseInt(document.getElementById("Decimal").value);
+    VstHex=VstDecimal.toString(16);
     document.getElementById("Hexadecimal").value=VstHex;
 }
