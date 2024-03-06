@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<title>Practica DOM</title>
+		<meta charset="utf-8" />
+		<meta name="author" content="AndresGarcia" />
+		<link href="./css/index.css" rel="stylesheet" type="text/css" />
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <style>
+            #tablacomunidades {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid black; /* Agregar borde a la tabla */
+    }
+        </style>
+	</head>
+	<body>
+		<main>
+			<section>
+                <form name="formulario">
+                    <article>
+                        <div class="contenedor">
+                            <div id="definiciones" class="cont">
+                                <h1>Definiciones</h1>
+                                <label for="palabra">Palabra</label>
+                                <input id="palabra" type="text" name="palabra"><br>
+                                <label for="concepto">Concepto</label>
+                                <input type="text" id="concepto" name="concepto"><br>
+                                <input  class="boton" id="botondefiniciones" type="button" name="boton" value="Añadir Definicion">
+                                <input  class="boton" id="botondefinicioneseliminar" type="button" name="boton" value="Eliminar Definicion"><br>
+                                <p>Lista de Definiciones</p>
+                                <dl id="listaDefiniciones">
+
+                                </dl>
+                            </div>
+                            <div id="localidades" class="cont">
+                                <h1>Nombres de Localidades</h1>
+                                <label for="localidad">Localidad</label>
+                                <input type="text" id="localidad" name="localidad"><br>
+                                <input  class="boton" id="añadirlocalidades" type="button" name="boton" value="Añadir Localidad"><br>
+                                <p>Lista de Localidades Ordenadas</p>
+                                <ul id="listalocalidades"></ul>
+                            </div>
+                        </div>
+                        <div class="contenedor">
+                            <div id="coches" class="cont">
+                                <h1>Listado de Coches</h1>
+                                <label for="marca">Marca</label>
+                                <input id="marca" type="text" name="marca"><br>
+                                <label for="modelo">Modelo</label>
+                                <input type="text" id="modelo" name="modelo"><br>
+                                <label for="precio">Precio</label>
+                                <input type="text" id="precio" name="precio"><br>
+                                <input  class="boton" id="botoncoches" type="button" name="boton" value="Añadir Coche">
+                                <input  class="boton" id="botonquitarcoche" type="button" name="botonquitarcoche" value="Eliminar Coche"><br><br>
+                                <table border="1px" id="tablacoches">
+                                    <thead>
+                                        <tr>
+                                            <th>Marca</th>
+                                            <th>Modelo</th>
+                                            <th>Precio</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+
+                                </table>
+                            </div>
+                            <div id="comunidades" class="cont">
+                                <h1>Comunidades Autónomas</h1>
+                                <label for="comunidades">Selecciona una comunidad autónoma:</label>
+                                <select id="comunidadesselect">
+                                    <option value="andalucia">Andalucía</option>
+                                    <option value="aragon">Aragón</option>
+                                    <option value="asturias">Asturias</option>
+                                </select><br>
+                                <label for="ciudades">Selecciona una ciudad:</label>
+                                <select id="ciudades">
+                                </select><br>
+                                <p>Comentario sobre la comunidad autónoma</p>
+                                <ul id="comentariociudadautonoma"></ul>
+                            </div>
+                            
+                        </div>
+                        
+                        <p id="identificadorTexto">Este es un párrafo de identificación.</p>
+
+                        <table id="tablacomunidades">
+                            <tr>
+                              <th>Comunidad</th>
+                              <th>Ciudad</th>
+                            </tr>
+                            <tr>
+                              <td>Andalucía</td>
+                              <td>Sevilla</td>
+                            </tr>
+                            <tr>
+                              <td>Aragón</td>
+                              <td>Zaragoza</td>
+                            </tr>
+                            <tr>
+                              <td>Asturias</td>
+                              <td>Oviedo</td>
+                            </tr>
+                            <tr>
+                              <td>Islas Baleares</td>
+                              <td>Palma de Mallorca</td>
+                            </tr>
+                            <tr>
+                              <td>Canarias</td>
+                              <td>Santa Cruz de Tenerife</td>
+                            </tr>
+                            <tr>
+                              <td>Cantabria</td>
+                              <td>Santander</td>
+                            </tr>
+                            <tr>
+                              <td>Castilla-La Mancha</td>
+                              <td>Toledo</td>
+                            </tr>
+                            <tr>
+                              <td>Castilla y León</td>
+                              <td>Valladolid</td>
+                            </tr>
+                            <tr>
+                              <td>Cataluña</td>
+                              <td>Barcelona</td>
+                            </tr>
+                            <tr>
+                              <td>Extremadura</td>
+                              <td>Mérida</td>
+                            </tr>
+                            <tr>
+                              <td>Galicia</td>
+                              <td>Santiago de Compostela</td>
+                            </tr>
+                            <tr>
+                              <td>Madrid</td>
+                              <td>Comunidad de Madrid</td>
+                            </tr>
+                            <tr>
+                              <td>Murcia</td>
+                              <td>Región de Murcia</td>
+                            </tr>
+                            <tr>
+                              <td>Navarra</td>
+                              <td>Pamplona</td>
+                            </tr>
+                            <tr>
+                              <td>País Vasco</td>
+                              <td>Bilbao</td>
+                            </tr>
+                            <tr>
+                              <td>La Rioja</td>
+                              <td>Logroño</td>
+                            </tr>
+                            <tr>
+                              <td>Comunidad Valenciana</td>
+                              <td>Valencia</td>
+                            </tr>
+                        </table>
+
+                        <input class="boton" id="botoncolores" type="button" name="boton" value="Aplicar Colores"><br><br>
+                    
+                    </article>
+                </form>
+			</section>
+		</main>
+		<footer>
+		
+		</footer>
+		<aside>
+		</aside>
+
+
+		<script src="./js/index.js"></script>
+
+	</body>
+</html>

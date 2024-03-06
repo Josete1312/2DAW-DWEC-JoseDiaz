@@ -1,0 +1,41 @@
+body{
+    background-color: blue;
+    color: white;
+}
+
+input,select{
+    background-color: white;
+}
+
+input,select{
+    color: black;
+}
+
+article{
+    margin-top: 5%;
+    width: 100%;
+}
+.contenedor{
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+}
+.cont{
+    width: 50%;
+}
+
+h1{
+    font-size: 200%;
+}
+
+table{
+    width: 70%;
+}
+
+
+
+#mensaje{
+    margin-top: 10%;
+}
+
+
