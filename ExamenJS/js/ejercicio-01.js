@@ -294,6 +294,6 @@ function validarDistribuidora(dist){
     return true;
 }
 
-function validarImporte(imp){
-    return /^\d+(\.\d{1,2})?$/.test(imp)
+function validarImporte(imp) {
+    return /^(26481|[2-9]\d{4,6}|[1-9]\d{5,6}|[1-9]\d{4,6}\.\d{1,2}|26481\.\d{1,2})$/.test(imp);
 }
