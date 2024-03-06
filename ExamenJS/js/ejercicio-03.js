@@ -3,21 +3,57 @@ $(document).ready(function () {
       let familia = $('#familia').val();
       let subfamilia = $('#subfamilia').val();
       let individuos = parseInt($('#individuos').val());
-      if (familia &&subfamilia &&!isNaN(individuos)) {
-          let fila = '<tr><td>'+familia+ '</td><td>'+subfamilia+'</td><td>'+individuos+'</td></tr>';
-          $('#tablaanimales tbody').append(fila);
-          let totalIndividuos = parseInt($('#totalIndividuos').text());
-          $('#totalIndividuos').text(totalIndividuos + individuos);
 
-          let familias = parseInt($('#totalFamilias').text());
-          $('#totalFamilias').text(familias+1);
+      // Verificar si la familia y subfamilia ya existen en la tabla
+      let filaExistente = $('#tablaanimales tbody tr').filter(function () {
+          return $(this).find('td:first-child').text() === familia &&
+                 $(this).find('td:nth-child(2)').text() === subfamilia;
+      });
 
-          let subfamilias = parseInt($('#totalSubfamilias').text());
-          $('#totalSubfamilias').text(subfamilias+1);
+      if (familia && subfamilia && !isNaN(individuos)) {
+          if (filaExistente.length > 0) {
+              // Si la fila existe, sumar individuos
+              let cantidadExistente = parseInt(filaExistente.find('td:nth-child(3)').text());
+              filaExistente.find('td:nth-child(3)').text(cantidadExistente + individuos);
+          } else {
+              // Si la fila no existe, agregar una nueva fila
+              let fila = '<tr><td>'+familia+'</td><td>'+subfamilia+'</td><td>'+individuos+'</td></tr>';
+              $('#tablaanimales tbody').append(fila);
+          }
 
-          $('#familia,#subfamilia,#individuos').val('');
+          // Ordenar filas por familia ascendente y por subfamilia descendente
+          let filasOrdenadas = $('#tablaanimales tbody tr').toArray().sort(function(a, b) {
+              let familiaA = $(a).find('td:first-child').text();
+              let subfamiliaA = $(a).find('td:nth-child(2)').text();
+              let familiaB = $(b).find('td:first-child').text();
+              let subfamiliaB = $(b).find('td:nth-child(2)').text();
+              if (familiaA === familiaB) {
+                  return subfamiliaB.localeCompare(subfamiliaA); // Orden descendente por subfamilia
+              }
+              return familiaA.localeCompare(familiaB); // Orden ascendente por familia
+          });
+
+          // Reemplazar filas en la tabla con las filas ordenadas
+          $('#tablaanimales tbody').empty().append(filasOrdenadas);
+
+          // Actualizar totales de familias y subfamilias
+          let totalFamilias = $('#tablaanimales tbody tr').length;
+          $('#totalFamilias').text(totalFamilias);
+
+          let totalSubfamilias = $('#tablaanimales tbody tr').length;
+          $('#totalSubfamilias').text(totalSubfamilias);
+
+          // Actualizar total de individuos
+          let totalIndividuos = 0;
+          $('#tablaanimales tbody tr').each(function () {
+              totalIndividuos += parseInt($(this).find('td:nth-child(3)').text());
+          });
+          $('#totalIndividuos').text(totalIndividuos);
+
+          // Limpiar campos de entrada
+          $('#familia, #subfamilia, #individuos').val('');
       } else {
-          alert("valroes invalidos");
+          alert("Valores inválidos");
       }
   });
 
