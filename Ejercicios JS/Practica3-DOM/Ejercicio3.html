@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selección de Comunidad y Provincia</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Selección de Comunidad y Provincia</h1>
+
+  <label for="comunidades">Comunidades Autónomas:</label>
+  <select id="comunidades" multiple>
+    <option value="Andalucía">Andalucía</option>
+    <option value="Aragón">Aragón</option>
+    <option value="Asturias">Asturias</option>
+    <option value="Cantabria">Cantabria</option>
+    <option value="Castilla y León">Castilla y León</option>
+    <option value="Castilla-La Mancha">Castilla-La Mancha</option>
+    <option value="Cataluña">Cataluña</option>
+    <option value="Comunidad Valenciana">Comunidad Valenciana</option>
+    <option value="Extremadura">Extremadura</option>
+    <option value="Galicia">Galicia</option>
+    <option value="Islas Baleares">Islas Baleares</option>
+    <option value="Islas Canarias">Islas Canarias</option>
+    <option value="La Rioja">La Rioja</option>
+    <option value="Madrid">Madrid</option>
+    <option value="Murcia">Murcia</option>
+    <option value="Navarra">Navarra</option>
+    <option value="País Vasco">País Vasco</option>
+    <option value="Ceuta">Ceuta</option>
+    <option value="Melilla">Melilla</option>
+  </select>
+
+  <button id="pasarProvincias">Pasar Provincias</button>
+
+  <label for="provincias">Provincias:</label>
+  <select id="provincias" multiple></select>
+  <script src="Ejercicio3.js"></script>
+</body>
+</html>

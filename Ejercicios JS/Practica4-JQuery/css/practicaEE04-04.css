@@ -1,0 +1,21 @@
+:root{
+	font-family:Calibri;
+	font-size:14pt;
+	line-height:1.5rem;
+	background-color:green;
+	color:white;
+	margin-left:5%;
+	margin-top:5%;
+}
+table {
+	border:1px solid blue;
+	width:90%;
+}
+table th, table td {
+	border:1px solid red;
+}
+#coches{
+	display:grid;
+	grid-template-columns:1fr  1fr;
+	grid-template-rows:1fr;
+}

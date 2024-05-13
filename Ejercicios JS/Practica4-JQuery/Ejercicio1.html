@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selección de País y Región</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="Ejercicio1.js" type="text/javascript"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Selección de País y Región</h1>
+
+  <label for="paises">Países:</label>
+  <select id="paises">
+    <option value="">Selecciona un país...</option>
+    <option value="Alemania">Alemania</option>
+    <option value="Francia">Francia</option>
+    <option value="Inglaterra">Inglaterra</option>
+    <option value="Italia">Italia</option>
+    <option value="Portugal">Portugal</option>
+  </select>
+
+  <button id="btnRegiones">Regiones</button>
+
+  <label for="regiones">Regiones:</label>
+  <select id="regiones" multiple></select>
+</body>
+</html>
