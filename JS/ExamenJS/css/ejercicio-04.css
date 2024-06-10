@@ -1,0 +1,15 @@
+:root{
+	font-family:Cambria;
+	font-size:14pt;
+	margin-left:10%;
+	margin-top:5%;
+	background-color:teal;
+	color:silver;
+	line-height:2.5rem;
+}
+header{
+	text-align:center;
+}
+fieldset{
+	width:60%;
+}
